@@ -1,0 +1,27 @@
+{
+  "name": "projectu1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "dev": "vite "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfgalarza5/emergentes-projectsU1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jfgalarza5/emergentes-projectsU1/issues"
+  },
+  "homepage": "https://github.com/jfgalarza5/emergentes-projectsU1#readme",
+  "dependencies": {
+    "nodemon": "^3.1.14",
+    "vite": "^8.0.11"
+  }
+}
