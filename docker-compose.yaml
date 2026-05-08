@@ -4,7 +4,7 @@ services:
     container_name: project-emergente
     ports:
       - "80:80"
-      - "443:433"
+      - "443:443"
     restart: unless-stopped
     volumes:
       - ./certbot/conf:/etc/letsencript
