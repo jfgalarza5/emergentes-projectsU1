@@ -3,5 +3,27 @@ services:
     build: .
     container_name: project-emergente
     ports:
-      - "8080:80"
+      - "80:80"
+      - "443:433"
     restart: unless-stopped
+    volumes:
+      - ./certbot/conf:/etc/letsencript
+      - ./certbot/www:/var/www/certbot
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+
+    command:
+      - certonly
+      - --webroot
+      - --webroot-path=/var/www/certbot
+      - --email
+      - johngalarza1970@gmail.com
+      - --agree-tos
+      - --no-eff-email
+      - -d
+      - emergentes.davant.dev
