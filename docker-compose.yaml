@@ -7,23 +7,4 @@ services:
       - "443:443"
     restart: unless-stopped
     volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-  certbot:
-    image: certbot/certbot
-    container_name: certbot
-
-    volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-
-    command:
-      - certonly
-      - --webroot
-      - --webroot-path=/var/www/certbot
-      - --email
-      - johngalarza1970@gmail.com
-      - --agree-tos
-      - --no-eff-email
-      - -d
-      - emergentes.davant.dev
+      - ./certs:/etc/nginx/certs
